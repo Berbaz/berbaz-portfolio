@@ -221,6 +221,58 @@ footer {
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.3s;
 }
+.social-icons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #1a1a1a;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 6px #00ffc3;
+}
+
+.social-icons a:hover {
+  transform: scale(1.15);
+  background-color: #00ffc3;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) saturate(100%) invert(71%) sepia(73%) saturate(271%) hue-rotate(105deg);
+}
+.profile-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.profile-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #00ffc3;
+  object-fit: cover;
+  box-shadow: 0 0 15px #00ffc3;
+  transition: transform 0.3s ease;
+}
+
+.profile-img img:hover {
+  transform: scale(1.05);
+}
+
+
+
 
 #contact button:hover {
   transform: scale(1.05);
