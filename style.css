@@ -1,0 +1,230 @@
+/* Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d0d;
+  color: #f1f1f1;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+a {
+  color: #00ffc3;
+  text-decoration: none;
+}
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+}
+section:nth-of-type(2) { animation-delay: 0.3s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.9s; }
+section:nth-of-type(5) { animation-delay: 1.2s; }
+section:nth-of-type(6) { animation-delay: 1.5s; }
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00ffc3;
+  animation: glowText 1s ease-in-out infinite alternate;
+}
+
+.btn {
+  background: #00ffc3;
+  color: #0d0d0d;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px #00ffc3;
+}
+.btn:hover {
+  background: #00e6b8;
+  transform: scale(1.05);
+  box-shadow: 0 0 16px #00ffc3;
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  animation: fadeIn 2s ease forwards;
+}
+.highlight {
+  font-size: 4rem;
+  color: #00ffc3;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* Projects */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+.project {
+  background: #1a1a1a;
+  padding: 1rem;
+  border: 1px solid #00ffc3;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px #00ffc3;
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.skills-list li {
+  background: #222;
+  border: 1px solid #00ffc3;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  animation: popUp 0.6s ease forwards;
+}
+.skills-list li:nth-child(1) { animation-delay: 0.3s; }
+.skills-list li:nth-child(2) { animation-delay: 0.4s; }
+.skills-list li:nth-child(3) { animation-delay: 0.5s; }
+.skills-list li:nth-child(4) { animation-delay: 0.6s; }
+.skills-list li:nth-child(5) { animation-delay: 0.7s; }
+
+/* Footer */
+footer {
+  padding: 1rem;
+  background: #111;
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #00ffc3; }
+  to { text-shadow: 0 0 20px #00ffc3; }
+}
+
+@keyframes pulseGlow {
+  from {
+    text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3;
+  }
+  to {
+    text-shadow: 0 0 30px #00ffc3, 0 0 40px #00ffc3;
+  }
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* === CONTACT SECTION === */
+#contact {
+  background: #0f1117;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fff;
+  border-top: 2px solid #00ffff22;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  color: #00ffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 8px #00ffff88;
+}
+
+#contact p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+#contact a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#contact input,
+#contact textarea {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1b1f2b;
+  color: #fff;
+  box-shadow: inset 0 0 5px #00ffff33;
+  transition: all 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px #00ffffaa;
+  background: #222632;
+}
+
+#contact textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+#contact button {
+  background: linear-gradient(135deg, #00ffff, #3dffea);
+  color: #000;
+  font-weight: bold;
+  padding: 0.9rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+}
+
+#contact button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00ffffaa;
+}
+
+
